@@ -1,0 +1,27 @@
+body {
+  margin: 0; }
+
+.container {
+  height: 5000px;
+  background-image: url("../../img/kod2.PNG");
+  background-size: 60%;
+  display: grid;
+  grid-template-rows: 5% auto 5%;
+  grid-template-columns: 25% auto 25%; }
+
+header {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  font-family: 'IBM Plex Mono', monospace;
+  color: #e7e5ec;
+  text-align: center;
+  font-size: 2em; }
+
+main {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background-color: #e7e5ec;
+  border-radius: 1em;
+  display: grid;
+  grid-template-rows: 2% auto;
+  grid-template-columns: repeat(1, 1fr); }
