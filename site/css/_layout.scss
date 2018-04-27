@@ -1,3 +1,8 @@
+$white: rgb(231, 229, 236);
+$grey: rgb(170, 168, 175);
+$slightly_darker: rgb(125, 124, 129);
+
+
 body {
     margin: 0;
 }
@@ -7,7 +12,7 @@ body {
     background-image: url('../../img/kod2.PNG');
     background-size: 60%;
     display: grid;
-    grid-template-rows: 5% auto 5%;
+    grid-template-rows: 7% auto 5%;
     grid-template-columns: 25% auto 25%;
 }
 
@@ -15,21 +20,68 @@ header {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     font-family: 'IBM Plex Mono', monospace;
-    color: rgb(231, 229, 236);
+    color: $white;
     text-align: center;
-    font-size: 2em;
+    font-size: 2.2em;
+}
+
+header h1 {
+    margin-bottom: 0;
+}
+
+header h2 {
+    margin-top: 20px;
+    font-size: 1.3em;
 }
 
 main {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    background-color: rgb(231, 229, 236);
-    border-radius: 1em;
+    background-color: $white;
+    border-radius: 20px;
     display: grid;
     grid-template-rows: 2% auto;
     grid-template-columns: repeat(1, 1fr);
+}
 
+nav {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+}
 
+nav a {
+
+    grid-row: span 1;
+    grid-column: span 1;
+    background-color: $grey;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 2em;
+    transition: 0.5s;
+    
+}
+
+nav a:hover {
+    background-color: $slightly_darker;
+    transition: 0.5s;
+}
+
+nav a:visited {
+    color: $white;
+}
+
+.nav1 {
+    border-top-left-radius: 20px;
+}
+
+.nav4 {
+    border-top-right-radius: 20px;
 }
 
 footer {
