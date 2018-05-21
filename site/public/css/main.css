@@ -154,22 +154,7 @@ nav.mobile {
     grid-column: 2 / 3;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 15vw auto 15vw; }
-
-  .show {
-    display: block; }
-
-  .open img {
-    display: block;
-    width: 13vw;
-    height: 13vw;
-    grid-row: 1 / 2;
-    grid-column: 1 / 2; }
-
-  .close img {
-    width: 13vw;
-    height: 13vw;
-    display: block; }
+    grid-template-columns: 1fr; }
 
   main {
     margin: 0;
@@ -189,4 +174,43 @@ nav.mobile {
     grid-column: 2 / 3; }
 
   nav {
-    display: none; } }
+    display: none; }
+
+  .icon {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    position: relative;
+    top: 2vh;
+    left: 1vw; }
+
+  .fade-layer {
+    display: none;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    opacity: 50;
+    z-index: 11; }
+
+  .fade {
+    display: block;
+    opacity: 0.5;
+    transition: ease-out 1s;
+    z-index: 11; }
+
+  .menu {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    background: #333333;
+    display: block;
+    transform: translateX(-100%);
+    text-align: left;
+    transition: transform ease-out 0.5s;
+    z-index: 11; }
+
+  .show {
+    display: block;
+    transition: transform ease-out 0.5s;
+    position: absolute;
+    transform: translateX(0%); } }

@@ -14,14 +14,20 @@
 <body>
     <div class="fade-layer"></div>
     <div class="container">
-        <nav class="mobile">
-            <div class="open" onclick="togglemenu()">
-                <img src="img/menu.png" alt="">
+        <div class="menu">
+            <div class="icons" onclick="toggleMenu()">
+                <img class="icon" src="img/exit.png" alt="menu.png">
             </div>
-            <div class="close" onclick="togglemenu()">
-                <img src="img/exit.png" alt="">
+            <ul>
+            </ul>
+        </div>
+        <nav class="mobile">
+            <div class="icons" onclick="toggleMenu()">
+                <img class="icon" src="img/menu.png" alt="">
             </div>
         </nav>
+
+
         <header>
             <h1>It-Gymnasiet Göteborg Programmeringsklubb
             </h1>
@@ -37,7 +43,7 @@
             </nav>
             <div class="content">
                 <%= yield %>
-                <!-- <footer></footer> -->
+                    <!-- <footer></footer> -->
             </div>
 
         </main>
