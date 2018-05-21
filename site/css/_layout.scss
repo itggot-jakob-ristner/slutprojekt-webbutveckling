@@ -182,11 +182,41 @@ nav a:visited {
     opacity: 50%;
 }
 
+nav.mobile {
+    display: none;
+}
 @media only screen and (max-device-width: 799px) {
     .container {
         height: auto;
-        grid-template-rows: 50px 160px auto;
+        grid-template-rows: 50px 200px auto;
         grid-template-columns: auto;
+    }
+
+    nav.mobile {
+    
+        grid-column: 2 / 3;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 15vw auto 15vw;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .open img {
+        display: block;
+        width: 13vw;
+        height: 13vw;
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+
+    .close img {
+        width: 13vw;
+        height: 13vw;
+        display: block;
+       
     }
     
     main {
