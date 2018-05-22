@@ -39,7 +39,7 @@ header h2 {
 main {
     margin-left: 5%;
     margin-right: 5%;
-    height: 1350px;
+    height: auto;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     background-color: $white;
@@ -182,14 +182,117 @@ nav a:visited {
     opacity: 50%;
 }
 
-nav.mobile {
+nav.mobile *{
     display: none;
 }
+
+.icons {
+    display: none;
+}
+
+.title {
+    grid-column: 1 / 5;
+    margin: 0;
+    text-align: center;
+}
+
+.title > h1 {
+    
+    font-size: 2.5rem;
+}
+
+#login {
+    grid-row: span 2;
+}
+
+ul {
+    display: none;
+}
+
+.login-register {
+    grid-column: span 2;
+    grid-row: span 2;
+    border-top: $blueish solid 2px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(8, 12.5%);
+}
+
+.login-register > input {
+    grid-row: span 1;
+    grid-column: 2 / 5;
+    border-radius: 0.2rem;
+}
+
+.login-register h1 {
+    margin-bottom: 10%;
+    grid-row: span 1;
+    grid-column: 1 / 5;
+}
+
+.login-register h2 {
+    grid-row: span 1;
+    grid-column: 1 / 2;
+}
+
+.login-register h3 {
+    grid-row: 5 / 6;
+    grid-column: 1 / 5;
+    text-align: center;
+}
+
+
+.login-register a {
+    margin-top: 50px;
+    margin-left: 70px;
+    width: 250px;
+    height: 250px;
+    grid-row: 6 / 7;
+    grid-column: 1 / 5;
+}
+
 @media only screen and (max-device-width: 799px) {
     .container {
         height: auto;
         grid-template-rows: 50px 200px auto;
         grid-template-columns: auto;
+        background-size: 100vw;
+    }
+    nav.mobile *{
+        display: block;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .menu-items a{
+        font-family: 'IBM Plex Mono', monospace;
+        text-decoration: none;
+        font-size: 1.3rem;
+        color: $white;
+    }
+
+    .menu-items a:visited {
+        font-family: 'IBM Plex Mono', monospace;
+        text-decoration: none;
+        color: $white;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .icons {
+        display: block;
+    }
+
+    .discord {
+        display: none;
+    }
+
+    .github {
+        display: none;
     }
 
     nav.mobile {
@@ -209,14 +312,22 @@ nav.mobile {
         border-radius: 0;
         background-color: $white;
         display: grid;
-        grid-template-rows: auto;
+        grid-template-rows: 200vh;
         grid-template-columns: repeat(1, 1fr);
     }
 
     header {
         margin-top: 30px;
-        font-size: 1em;
+        font-size: 4vw;
         grid-column: 2 / 3;
+    }
+
+    .content {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        display: grid;
+        grid-template-rows: repeat(8, 25vh);
+        grid-template-columns: repeat(4, 25vw);
     }
 
     nav {
@@ -229,7 +340,7 @@ nav.mobile {
         top: 2vh;
         left: 1vw;
     }
-.fade-layer{
+    .fade-layer{
         display: none;
         background-color: black;
         width: 100vw;
@@ -264,6 +375,56 @@ nav.mobile {
         position: absolute;
         transform: translateX(0%);
     }
+
+    .content  > img {
+        display: none;
+    }
+
+    #code-icon {
+        display: none;
+    }
+
+    .content1 {
+        grid-column: 1 / 5;
+        grid-row: 1 / 4;
+    }
+
+    .content2 {
+        grid-column: 1 / 5;
+        grid-row: 5 / 9;
+    }
+
+    .content * {
+        font-size: 1rem;
+    }
+
+    .content h1 {
+        font-size: 1.5rem;
+    }
+
+    #login p{
+        font-size: 0.75rem;
+        margin: 10px;
+    }
+
+    .login-register {
+        grid-row: 6 / 9;
+        grid-column: 1 / 5;
+    }
+
+    .vincent {
+        display: block;
+
+    }
+
+    .login-register a {
+        width: 200px;
+        height: 200px;
+        margin-top: 100px;
+        margin-left: 50px;
+    }
+
+
 
 
 
