@@ -1,9 +1,11 @@
 require 'cssminify'
 require 'uglifier'
+require 'byebug'
 
 def minify(path, pattern, minifier, opts = nil)
     files = Dir.glob("#{path}#{pattern}")
     minifier, method = minifier.split('.')
+    
     minifier = Object.const_get(minifier)
     files.each do |file|
         contents = File.read(file)
